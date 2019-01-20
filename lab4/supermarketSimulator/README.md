@@ -8,4 +8,6 @@
 [Installation guide](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
 
 Запуск
+```bat
 mvn clean package && java -jar target/task1-1.0.SNAPSHOT.jar <input file> <output file>
+```
