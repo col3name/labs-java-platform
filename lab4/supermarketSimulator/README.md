@@ -3,9 +3,9 @@
 В потоке Consumer выполняется обработка (оплата) покупок пользователей.
 
 Использование:
-Запустить clean-run.bat предправительно установив менеджер пакетов maven. [Download page](https://maven.apache.org/download.cgi) .
+Запустить clean-run.bat предправительно установив менеджер пакетов maven, java 8 jdk. [Download page](https://maven.apache.org/download.cgi) .
  
-[Installation guide](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
+[Installation guide on windows](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
 
 Запуск
 ```bat
