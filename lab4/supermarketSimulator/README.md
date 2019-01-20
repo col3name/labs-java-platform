@@ -9,5 +9,5 @@
 
 Запуск
 ```bat
-mvn clean package && java -jar target/supermarket-1.1-SNAPSHOT.jar 200 1 1
+mvn clean package && java -jar target/supermarket-1.1-SNAPSHOT.jar <workMilliseconds> <countOrderProducer> <countCashBox>
 ```
