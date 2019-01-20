@@ -1,1 +1,1 @@
-mvn clean package && java -jar target/supermarketSimulator-1.0-SNAPSHOT.jar
+mvn clean package && java -jar target/supermarket-1.1-SNAPSHOT.jar 200 1 1

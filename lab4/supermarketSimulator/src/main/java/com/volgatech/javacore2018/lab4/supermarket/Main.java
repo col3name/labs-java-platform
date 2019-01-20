@@ -1,7 +1,5 @@
 package com.volgatech.javacore2018.lab4.supermarket;
 
-import com.volgatech.javacore2018.lab4.supermarket.applicationhost.config.Config;
-import com.volgatech.javacore2018.lab4.supermarket.applicationhost.config.SupermarketInitDataBuilder;
 import com.volgatech.javacore2018.lab4.supermarket.applicationhost.controller.SimulatorController;
 import com.volgatech.javacore2018.lab4.supermarket.applicationhost.initializer.CustomerMemoryInitializerImpl;
 import com.volgatech.javacore2018.lab4.supermarket.applicationhost.initializer.StoreMemoryInitializerImpl;
@@ -18,8 +16,8 @@ import com.volgatech.javacore2018.lab4.supermarket.domain.interfaces.initialiaze
 import com.volgatech.javacore2018.lab4.supermarket.domain.interfaces.services.OrderConsumerService;
 import com.volgatech.javacore2018.lab4.supermarket.domain.interfaces.services.OrderProducerService;
 import com.volgatech.javacore2018.lab4.supermarket.domain.interfaces.services.SupermarketService;
+import com.volgatech.javacore2018.lab4.supermarket.domain.model.valueobject.SupermarketServiceInitData;
 
-import java.io.IOException;
 import java.util.logging.Logger;
 
 public class Main {
@@ -27,6 +25,13 @@ public class Main {
 
     public static void main(String[] args) {
         try {
+            if (args.length != 3) {
+                throw new InvalidModelException("Invalid argument count\nUsage java -jar target/supermarket-1.1-SNAPSHOT.jar <workMilliseconds> <countOrderProducer> <countCashBox>");
+            }
+            Long timeOut = Long.valueOf(args[0]);
+            int countOrderProducer = Integer.parseInt(args[1]);
+            int countCashBox = Integer.parseInt(args[2]);
+
             Initializer<StoreMemoryRepositoryImpl> storeRepositoryInitializer = new StoreMemoryInitializerImpl();
             StoreMemoryRepositoryImpl storeRepository = storeRepositoryInitializer.init();
 
@@ -36,13 +41,16 @@ public class Main {
             OrderProducerService producer = new OrderProducerServiceImpl(customerRepository, storeRepository, new OrderGeneratorImpl(storeRepository));
             OrderConsumerService consumer = new OrderConsumerServiceImpl(customerRepository);
 
-            SupermarketInitDataBuilder supermarketInitDataBuilder = new SupermarketInitDataBuilder(producer, consumer, Config.PROPERTY_FILE);
+            SupermarketServiceInitData supermarketInitData = new SupermarketServiceInitData(producer, consumer)
+                    .setTimeout(timeOut)
+                    .setCountOrderProducer(countOrderProducer)
+                    .setCountCashBox(countCashBox);
 
-            SupermarketService supermarketService = new SupermarketServiceImpl(supermarketInitDataBuilder.build());
+            SupermarketService supermarketService = new SupermarketServiceImpl(supermarketInitData);
 
             SimulatorController controller = new SimulatorController(supermarketService);
             controller.execute(new ConsoleReportView());
-        } catch (IOException | InvalidModelException e) {
+        } catch (InvalidModelException e) {
             LOG.warning(e.getMessage());
         }
     }
