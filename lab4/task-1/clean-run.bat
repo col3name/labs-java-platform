@@ -1,0 +1,1 @@
+mvn clean package && java -jar target/recurisveawalk-1.0-SNAPSHOT.jar input.txt output.txt

@@ -1,0 +1,14 @@
+20 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+584ef371 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+d : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+545460a1 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+75 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+1624e8a1 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+73 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\src\main\java\com\volgatech\javacore2018\lab4\recurisveawalk
+6b : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+6f : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+6f : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+65 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+6e : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+5df7488e : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
+1 : C:\Users\mikus\Desktop\labs-java-platform\lab4\task-1\.\.idea
